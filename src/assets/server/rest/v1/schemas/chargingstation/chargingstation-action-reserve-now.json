@@ -1,0 +1,42 @@
+{
+  "$id": "chargingstation-action-reserve-now",
+  "title": "Reserve Now",
+  "type": "object",
+  "properties": {
+    "chargingStationId": {
+      "$ref": "chargingstation#/definitions/id"
+    },
+    "args": {
+      "type": "object",
+      "properties": {
+        "connectorId": {
+          "$ref": "chargingstation#/definitions/connector/properties/connectorId"
+        },
+        "expiryDate": {
+          "type": "string",
+          "format": "date-time",
+          "customType": "date",
+          "sanitize": "mongo"
+        },
+        "idTag": {
+          "$ref": "tag#/definitions/id"
+        },
+        "visualTagID": {
+          "$ref": "tag#/definitions/visualID"
+        },
+        "carID": {
+          "$ref": "reservation#/definitions/carID"
+        },
+        "parentIdTag": {
+          "$ref": "tag#/definitions/id"
+        },
+        "reservationId": {
+          "type": "number",
+          "sanitize": "mongo"
+        }
+      },
+      "required": ["connectorId", "expiryDate", "visualTagID"]
+    }
+  },
+  "required": ["chargingStationId"]
+}

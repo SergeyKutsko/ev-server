@@ -1,0 +1,11 @@
+{
+  "$id": "transaction-stop",
+  "title": "Stop Transaction Request",
+  "type": "object",
+  "properties": {
+    "ID": {
+      "$ref": "transaction#/definitions/id"
+    }
+  },
+  "required": ["ID"]
+}

@@ -1,0 +1,19 @@
+#!/bin/sh
+
+# Instructions:
+# Put this file into your .git/hooks folder and set as executable
+#   - for Windows (attrib +x pre-commit)
+#   - for *nix (chmod +x pre-commit)
+
+# echo "Starting the server"
+# pnpm start:dev
+
+echo "Running linter fix:"
+pnpm eslint:fix
+
+echo "Running unit tests (do not forget to start the server before with 'pnpm start:dev'):"
+# pnpm start:email &
+pnpm mochatest
+
+# Do not abort the commit because of errors
+exit 0

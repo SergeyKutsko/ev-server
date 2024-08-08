@@ -1,0 +1,11 @@
+{
+  "$id": "site-area-get-image",
+  "title": "Get Site Area Image Request",
+  "type": "object",
+  "properties": {
+    "ID": {
+      "$ref": "common#/definitions/id"
+    }
+  },
+  "required": ["ID"]
+}

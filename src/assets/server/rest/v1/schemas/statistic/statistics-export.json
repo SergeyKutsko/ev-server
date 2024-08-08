@@ -1,0 +1,46 @@
+{
+  "$id": "statistic-export",
+  "title": "Export statistics Request",
+  "type": "object",
+  "properties": {
+    "DataType": {
+      "type": "string",
+      "enum": ["Consumption", "Usage", "Inactivity", "Transactions", "Pricing"],
+      "sanitize": "mongo"
+    },
+    "StartDateTime": {
+      "type": "string",
+      "format": "date-time",
+      "customType": "date",
+      "sanitize": "mongo"
+    },
+    "EndDateTime": {
+      "type": "string",
+      "format": "date-time",
+      "customType": "date",
+      "sanitize": "mongo"
+    },
+    "SiteAreaID": {
+      "$ref": "common#/definitions/ids"
+    },
+    "ChargingStationID": {
+      "$ref": "common#/definitions/string-ids"
+    },
+    "UserID": {
+      "$ref": "common#/definitions/ids"
+    },
+    "SiteID": {
+      "$ref": "common#/definitions/ids"
+    },
+    "DataCategory": {
+      "type": "string",
+      "enum": ["C", "U"],
+      "sanitize": "mongo"
+    },
+    "DataScope": {
+      "type": "string",
+      "enum": ["year", "month", "total"],
+      "sanitize": "mongo"
+    }
+  }
+}

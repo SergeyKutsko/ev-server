@@ -1,0 +1,21 @@
+{
+  "$id": "chargingstation-action-reservation-cancel",
+  "title": "Cancel Reservation",
+  "type": "object",
+  "properties": {
+    "chargingStationId": {
+      "$ref": "chargingstation#/definitions/id"
+    },
+    "args": {
+      "type": "object",
+      "properties": {
+        "reservationId": {
+          "type": "number",
+          "sanitize": "mongo"
+        }
+      },
+      "required": ["reservationId"]
+    }
+  },
+  "required": ["chargingStationId"]
+}

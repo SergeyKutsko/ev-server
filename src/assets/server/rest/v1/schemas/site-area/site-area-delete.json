@@ -1,0 +1,11 @@
+{
+  "$id": "site-area-delete",
+  "title": "Delete Site Area Request",
+  "type": "object",
+  "properties": {
+    "ID": {
+      "$ref": "common#/definitions/id"
+    }
+  },
+  "required": ["ID"]
+}

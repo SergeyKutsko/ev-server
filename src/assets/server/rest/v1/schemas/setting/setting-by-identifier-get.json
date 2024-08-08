@@ -1,0 +1,12 @@
+{
+  "$id": "setting-by-identifier",
+  "title": "Setting by identifier Request",
+  "description": "",
+  "type": "object",
+  "properties": {
+    "Identifier": {
+      "$ref": "setting#/definitions/identifier"
+    }
+  },
+  "required": ["Identifier"]
+}
