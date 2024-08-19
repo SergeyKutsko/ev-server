@@ -25,7 +25,7 @@ phases:
       - npm install
   build:
     commands:
-      - pnpm build:prod
+      - npm build:prod
 artifacts:
   type: zip
   files:

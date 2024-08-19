@@ -20,7 +20,8 @@ services:
       - evse_mongodb_1
       - evse_mailserver_1
     environment:
-      WAIT_HOSTS: ev_mongo:27017
+      WAIT_HOSTS: ninja.oznom.mongodb.net/?retryWrites=true&w=majority&appName=Ninja
+      WAIT_HOSTS_TIMEOUT: 90  #mongodb+srv://evse-user:<password>@ninja.oznom.mongodb.net/?retryWrites=true&w=majority&appName=Ninja
       WAIT_HOSTS_TIMEOUT: 90
       WAIT_AFTER_HOSTS: 3
     networks:

@@ -12,7 +12,7 @@
       "type": "ocpp",
       "implementation": "soap",
       "protocol": "http",
-      "host": "server",
+      "host": "0.0.0.0",
       "port": 8000,
       "debug": true
     },
@@ -20,15 +20,15 @@
       "type": "ocpp",
       "implementation": "json",
       "protocol": "ws",
-      "host": "server",
+      "host": "0.0.0.0",
       "port": 8010,
       "debug": true
     }
   ],
   "CentralSystemRestService": {
     "protocol": "http",
-    "host": "server",
-    "port": 81,
+    "host": "0.0.0.0",
+    "port": 8081,
     "userTokenKey": "s3A9js135sdf384hgj384ku38lilckjflskdjf2797boeiBhxQDM1GInRith",
     "userTokenLifetimeHours": 12,
     "userDemoTokenLifetimeDays": 365,
@@ -41,36 +41,36 @@
   },
   "CentralSystemFrontEnd": {
     "protocol": "http",
-    "host": "localhost",
-    "port": 3080
+    "host": "0.0.0.0",
+    "port": 8081
   },
   "CentralSystemServer": {
     "protocol": "http",
-    "host": "server",
-    "port": 81
+    "host": "0.0.0.0",
+    "port": 8081
   },
   "OCPIService": {
     "protocol": "http",
-    "host": "server",
+    "host": "0.0.0.0",
     "port": 9090,
     "debug": true
   },
   "ODataService": {
     "protocol": "http",
-    "host": "server",
+    "host": "0.0.0.0",
     "port": 9292,
     "debug": true
   },
   "WSDLEndpoint": {
-    "baseUrl": "http://server:8000",
-    "baseSecureUrl": "http://server:8000"
+    "baseUrl": "http://0.0.0.0:8000",
+    "baseSecureUrl": "http://0.0.0.0:8000"
   },
   "JsonEndpoint": {
-    "baseUrl": "ws://server:8010",
-    "baseSecureUrl": "http://server:8010"
+    "baseUrl": "ws://0.0.0.0:8010",
+    "baseSecureUrl": "http://0.0.0.0:8010"
   },
   "OCPIEndpoint": {
-    "baseUrl": "http://server:9090"
+    "baseUrl": "http://0.0.0.0:9090"
   },
   "AsyncTask": {
     "active": true,
@@ -78,8 +78,8 @@
   },
   "Storage": {
     "implementation": "mongodb",
-    "uri": "mongodb://evse-user:evse-user-pwd@mongodb:27017/evse",
-    "host": "mongodb",
+    "uri": "mongodb+srv://evse-user:evse-user-pwd@ninja.oznom.mongodb.net/?retryWrites=true&w=majority&appName=Ninja",
+    "host": "mongodb+srv://ninja.oznom.mongodb.net/?retryWrites=true&w=majority&appName=Ninja",
     "port": 27017,
     "user": "evse-user",
     "password": "evse-user-pwd",

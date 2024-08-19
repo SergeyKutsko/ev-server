@@ -198,7 +198,7 @@ export default class BuiltInPricingIntegration extends PricingIntegration<Simple
       dimensions: {
         energy: {
           active: true,
-          price: 0, // this.setting.price,
+          price: this.setting.price,
         },
       },
     };
